@@ -1,0 +1,177 @@
+/*regole genrali*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+/*regole di sfondo*/
+
+.full-background {
+    height: 100vh;
+    background-color:rgb(215, 213, 206);
+    position: relative;
+}
+
+.up-background {
+    height: 15vh;
+    background-color: rgb(2, 139, 126);
+}
+
+/*regole container*/
+
+.big-container {
+    z-index: 99999;
+    height: 94%;
+    width: 80%;
+    background-color: rgb(54, 63, 146);
+    position: absolute;
+    top: 3%;
+    left: calc(50% - 40%);
+}
+
+
+
+/*regole side-bar*/
+
+
+.side-bar {
+    height: 100%;
+    width: 35%;
+    background-color: beige;
+    float: left;
+}
+
+.side-bar .top-menu {
+    min-height: 70px;
+    background-color: rgb(208, 223, 230);
+    display: flex;
+
+}
+
+
+.side-bar .avatar-box {
+    height: 70px;
+    width: 20%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+.side-bar .text-box {
+    height: 70px;
+    width: 45%;
+    display: flex;
+    align-items: center;
+}
+
+.side-bar .icons-box {
+    height: 70px;
+    width: 35%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 10px;
+}
+
+/*Regole chat-bar*/
+
+.chat-bar .avatar-box {
+    height: 70px;
+    width: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    float: left;
+}
+
+.chat-bar .text-box {
+    height: 70px;
+    width: 260px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    font-size: 14px;
+    padding: 6px;
+    font-weight: 600;
+    float: left;
+}
+ 
+.chat-bar .text-box p {
+     color: grey;
+}
+ 
+
+.chat-bar {
+    height: 100%;
+    width: 65%;
+    background-image: url(img/mine.jpg);
+    float: right;
+}
+
+.chat-bar .top-menu {
+    min-height: 70px;
+    background-color: rgb(208, 223, 230);
+    border-left: 2px solid rgb(177,177,177);
+}
+
+.chat-bar .icons-box {
+    height: 70px;
+    width: 150px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    float: right;
+}
+
+.chat-bar .bottom-menu {
+    min-height: 70px;
+    width: 65%;
+    background-color: rgb(208, 223, 230);
+    position: absolute;
+    bottom: 0px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.chat-bar input {
+    width: 80%;
+    height: 50px;
+    border-radius: 6px;
+    padding-left: 15px;
+    border: none;
+    font-weight: 100;
+}
+
+.chat-bar .bottom-menu i {
+    margin: 0 30px;
+}
+
+
+/*Regole di clearfix dei float*/
+
+.big-container::after {
+        clear: both;
+        display: table;
+        content: "";
+}
+
+/*regole generali per img-avatar*/
+
+.avatar {
+    height: 55px;
+    border-radius: 50%;
+}
+
+/*regole generali per i font awesome*/
+
+.fa-solid {
+    color: grey;
+    font-size: 25px;
+}
+

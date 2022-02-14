@@ -225,6 +225,7 @@
 .contacts .row {
     height: 100px;
     border: 1px solid black;
+    position: relative;
 }
 
 .contacts .row:hover {
@@ -266,6 +267,16 @@
 .icon-box i {
     font-size: 18px;
 }
+
+.contacts img {
+    height: 70px;
+    border-radius: 70px;
+    position: absolute;
+    top: calc(50% - 35px);
+    left: 10px;
+}
+
+
 
 
 

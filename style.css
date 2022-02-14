@@ -213,3 +213,59 @@
     font-size: 25px;
 }
 
+/*regole root-container*/
+
+.contacts {
+    height: calc(100% - 200px);
+    border: 1px solid black;
+    width: 100%;
+    overflow-y: scroll;
+}
+
+.contacts .row {
+    height: 100px;
+    border: 1px solid black;
+}
+
+.contacts .row:hover {
+    background-color: rgba(180, 179, 179, 0.452);
+}
+
+.chat-box {
+    height: calc(100% - 140px);
+    width: 100%;
+    border: 1px solid blue;
+    overflow-y: scroll;
+}
+
+.search {
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.search input {
+    width: 80%;
+    height: 75%;
+    border: none;
+    font-size: 15px;
+    border-radius: 2px;
+}
+
+.icon-box {
+    width: 15%;
+    background-color: white;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 2px;
+}
+
+.icon-box i {
+    font-size: 18px;
+}
+
+
+

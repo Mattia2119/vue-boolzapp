@@ -217,19 +217,8 @@
 
 .contacts {
     height: calc(100% - 200px);
-    border: 1px solid black;
     width: 100%;
     overflow-y: scroll;
-}
-
-.contacts .row {
-    height: 100px;
-    border: 1px solid black;
-    position: relative;
-}
-
-.contacts .row:hover {
-    background-color: rgba(180, 179, 179, 0.452);
 }
 
 .chat-box {
@@ -237,6 +226,9 @@
     width: 100%;
     border: 1px solid blue;
     overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    padding: 30px 50px;
 }
 
 .search {
@@ -269,14 +261,60 @@
 }
 
 .contacts img {
-    height: 70px;
+    height: 60px;
     border-radius: 70px;
-    position: absolute;
-    top: calc(50% - 35px);
-    left: 10px;
 }
 
+.contact {
+    height: 70px;
+    display: flex;
+    padding: 5px;
+    align-items: center;
+}
 
+.contact-info {
+    margin-left: 20px;
+    margin-bottom: 15px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    width: calc(100% - 80px);
+    color: grey;
+}
 
+.contact-info h5 {
+    color: black;
+}
+
+.contact-info span {
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.contact.active, .contact:hover {
+  background-color: #eaeaea;
+}
+
+.message {
+    max-width: 40%;
+    min-width: 150px;
+    border-radius: 10px;
+    padding: 20px 5px 5px 20px;
+}
+
+.message.received {
+ background-color: white;
+}
+
+.message.sent {
+    background-color: #d5f9ba;
+    margin-left: auto;
+}
+
+.message .sent-date {
+    font-size: 11px;
+    color: grey;
+    text-align: right;
+}
 
 

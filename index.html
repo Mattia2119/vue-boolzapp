@@ -13,110 +13,132 @@
 
 </head>
 <body>
-    <!--container di servizio per lo sfondo-->
-    <div class="full-background">
 
-        <div class="up-background">
-        <!--Barra verde-->
-        </div>
+    <div id="root">
+        <!--container di servizio per lo sfondo-->
+        <div class="full-background">
 
-        <!--container principale-->
-        <div class="big-container">
+            <div class="up-background">
+            <!--Barra verde-->
+            </div>
 
-            <!--Inizio menù laterale-->
-            <div class="side-bar">
+            <!--container principale-->
+            <div class="big-container">
 
-                <div class="top-menu">  
-                    <div class="avatar-box">
-                        <img class="avatar" src="img/avatar_io.jpg" alt="avatar.pic">
-                   </div>
-                   
-                    <div class="text-box">
-                        <h5>Nome Utente</h5>
+                <!--Inizio menù laterale-->
+                <div class="side-bar">
+
+                    <div class="top-menu">  
+                        <div class="avatar-box">
+                            <img class="avatar" src="img/avatar_io.jpg" alt="avatar.pic">
+                    </div>
+                    
+                        <div class="text-box">
+                            <h5>Nome Utente</h5>
+                        </div>
+
+                        <div class="icons-box">
+                            <i class="fa-solid fa-rotate-right"></i>
+                            <i class="fa-solid fa-message"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>    
                     </div>
 
-                    <div class="icons-box">
-                        <i class="fa-solid fa-rotate-right"></i>
-                        <i class="fa-solid fa-message"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>    
-                </div>
-
-                <div class="notifications">
-                    <div class="avatar-box">
-                        <div class="rounded">
-                            <i class="fa-solid fa-bell-slash"></i>
+                    <div class="notifications">
+                        <div class="avatar-box">
+                            <div class="rounded">
+                                <i class="fa-solid fa-bell-slash"></i>
+                            </div>
+                        </div>
+                    
+                        <div class="text-box">
+                            <p>Ricevi notifiche di nuovi messaggi</p>
+                            <a href="#">Attiva notifiche desktop</a>
                         </div>
                     </div>
-                   
-                    <div class="text-box">
-                        <p>Ricevi notifiche di nuovi messaggi</p>
-                        <a href="#">Attiva notifiche desktop</a>
+
+                    <div class="search">
+                        <div class="icon-box">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        </div>
+                        <input type="text" placeholder="Cerca o inizia una nuova chat">
                     </div>
-                </div>
 
-                <div class="search">
-                    <div class="icon-box">
-                       <i class="fa-solid fa-magnifying-glass"></i>
+                    
+                    <div class="contacts">
+                        <!--Inserisco il v-for per andare ad inserire dinamicamente gli oggetti del mio array-->
+                        <div class="contact" v-for="contact in contacts">
+                            <!--Eseguo il binding coi :, e gli passo la stringa che corrisponde al testo scritto dentro avatar,tramite l'interpolazione-->
+                            <img :src='"img/avatar" + contact.avatar + ".jpg"'>
+
+                            <div class="contact-info">
+                                <h5>{{contact.name}}</h5>
+                                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet, quia tempore? Error reiciendis quod aperiam commodi asperiores inventore laborum placeat, nisi ad esse magnam eligendi voluptates quisquam incidunt sequi unde!</span>
+                            </div>
+                           
+                        </div>
+                    
                     </div>
-                    <input type="text" placeholder="Cerca o inizia una nuova chat">
+
                 </div>
+                <!--Fine menù laterale-->
 
-                <div class= contacts>
 
-                    <div class="row">
+                <!--Inzio barra della chat-->
+                <div class="chat-bar">
+
+                    <div class="top-menu">
+
+                        <div class="avatar-box">
+                            <img class="avatar" src="img/avatar_1.jpg" alt="avatar.pic">
+                        </div>
+
+                        <div class="text-box">
+                            <h3>Michele</h3>
+                            <p>Ultimo accesso oggi alle 10/01/2020</p>
+                            <p>16:15:22</p>
+                        </div>
+
+                        <div class="icons-box">
+                            <i class="fa-solid fa-magnifying-glass"></i>
+                            <i class="fa-solid fa-paperclip"></i>
+                            <i class="fa-solid fa-ellipsis-vertical"></i>
+                        </div>
                         
                     </div>
 
+                    <div class="chat-box">
+
+                        <div class="message received">
+                            lorem ipsum
+                            <div class="sent-date">10/01/2020</div>
+                        </div>
+
+                        <div class="message sent">
+                           lorem ipsum
+                           <div class="sent-date">10/01/2020</div>
+                        </div>
+
+                    </div>
+
+                    <div class="bottom-menu">
+
+                        <i class="fa-solid fa-face-smile"></i>
+                        <input type="text" placeholder="Scrivi un messaggio">
+                        <i class="fa-solid fa-microphone"></i>
+
+                    </div>
+
                 </div>
+                <!--Fine barra della chat-->
 
             </div>
-            <!--Fine menù laterale-->
-
-
-            <!--Inzio barra della chat-->
-            <div class="chat-bar">
-
-                <div class="top-menu">
-
-                     <div class="avatar-box">
-                         <img class="avatar" src="img/avatar_1.jpg" alt="avatar.pic">
-                    </div>
-
-                    <div class="text-box">
-                        <h3>Michele</h3>
-                        <p>Ultimo accesso oggi alle 10/01/2020</p>
-                        <p>16:15:22</p>
-                    </div>
-
-                    <div class="icons-box">
-                        <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-solid fa-paperclip"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                    
-                </div>
-
-                <div class="chat-box">
-
-                </div>
-
-                <div class="bottom-menu">
-
-                    <i class="fa-solid fa-face-smile"></i>
-                     <input type="text" placeholder="Scrivi un messaggio">
-                     <i class="fa-solid fa-microphone"></i>
-
-                </div>
-
-            </div>
-            <!--Fine barra della chat-->
 
         </div>
-
-    </div>
-    <!--Fine container di servizio per lo sfondo-->
+        <!--Fine container di servizio per lo sfondo-->
     
+    </div>
+        
 
 
 

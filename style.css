@@ -224,7 +224,6 @@
 .chat-box {
     height: calc(100% - 140px);
     width: 100%;
-    border: 1px solid blue;
     overflow-y: scroll;
     display: flex;
     flex-direction: column;

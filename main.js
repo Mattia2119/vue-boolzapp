@@ -87,11 +87,25 @@ const app = new Vue(
                       ], 
                }, 
         ], 
+        active: 0,
         
                      
         },
         methods: {
+           setContactActive(index) {
+                  this.active = index;
+           },
+           sendMessage() {
+                  const newMessageObject = {
+                         date: "Dopo...",
+                         text: this.newMessage,
+                         status: "sent" 
+                  }
 
+                  this.contacts[this.active].messages.push(newMessageObject);
+
+                  this.newMessage = "";
+           }
         }
     }
 );

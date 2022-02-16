@@ -67,7 +67,7 @@
                     
                     <div class="contacts">
                         <!--Inserisco il v-for per andare ad inserire dinamicamente gli oggetti del mio array-->
-                        <div class="contact" v-for="contact in contacts">
+                        <div class="contact" :class="(index == active)?'active':''" v-for="(contact, index) in contacts" @click="setContactActive(index)">
                             <!--Eseguo il binding coi :, e gli passo la stringa che corrisponde al testo scritto dentro avatar,tramite l'interpolazione-->
                             <img :src='"img/avatar" + contact.avatar + ".jpg"'>
 
@@ -109,6 +109,13 @@
 
                     <div class="chat-box">
 
+                        <div v-for="message in contacts[active].messages" class="message" :class="message.status">
+                            {{message.text}}
+                            <div class="sent-date">{{message.date}}</div>
+                        </div>
+                        
+
+                        <!--
                         <div class="message received">
                             lorem ipsum
                             <div class="sent-date">10/01/2020</div>
@@ -118,13 +125,13 @@
                            lorem ipsum
                            <div class="sent-date">10/01/2020</div>
                         </div>
-
+                              -->
                     </div>
 
                     <div class="bottom-menu">
 
                         <i class="fa-solid fa-face-smile"></i>
-                        <input type="text" placeholder="Scrivi un messaggio">
+                        <input type="text" placeholder="Scrivi un messaggio..." v-model="newMessage" @keyup.enter="sendMessage">
                         <i class="fa-solid fa-microphone"></i>
 
                     </div>
@@ -139,7 +146,6 @@
     
     </div>
         
-
 
 
 

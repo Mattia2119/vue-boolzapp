@@ -88,6 +88,7 @@ const app = new Vue(
                }, 
         ], 
         active: 0,
+        newMessage: "",
         
                      
         },
@@ -97,7 +98,7 @@ const app = new Vue(
            },
            sendMessage() {
                   const newMessageObject = {
-                         date: "Dopo...",
+                         date: dayjs().format("MM-DD-YYYY HH:MM:ss"),
                          text: this.newMessage,
                          status: "sent" 
                   }
@@ -105,6 +106,22 @@ const app = new Vue(
                   this.contacts[this.active].messages.push(newMessageObject);
 
                   this.newMessage = "";
+
+                  const newMessageReply = {
+                     date: dayjs().format("MM-DD-YYYY HH:MM:ss"),
+                     text: "ok",
+                     status: "received" 
+                  };
+
+                  let that = this;
+                  
+                  setTimeout(function() {
+
+                     that.contacts[that.active].messages.push(newMessageReply)
+
+                  },1000);
+
+                 
            }
         }
     }
